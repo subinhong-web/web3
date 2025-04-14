@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계절문제</title>
+</head>
+<body>
+    
+    <script>
+        // 1. 사용자에게 어떤 계절을 좋아하는지 물어본다.
+        // 2. 받아온 값이 봄과 같다면 봄을 좋아하는 당신! 당신에겐 꽃향기가 납니다.
+        // 3. 여름을 좋아하는 당신! 휴가로 시원한 바다는 어때요?
+        // 3. 가을을 좋아하는 당신! 낙엽이 떨어지는 낭만의 계절
+        // 4. 겨울을 좋아하는 당신! 눈사람을 만들고 스키를 타러가요~
+
+        let season = prompt("어떤 계절을 좋아하나요?");
+
+        if(season == "봄") {
+            document.write("봄을 좋아하는 당신! 당신에겐 꽃향기가 납니다.");
+        } else if(season == "여름") {
+            document.write("여름을 좋아하는 당신! 휴가로 시원한 바다는 어때요?");
+        } else if(season == "가을") {
+            document.write("가을을 좋아하는 당신! 낙엽이 떨어지는 낭만의 계절");
+        } else if(season == "겨울") {
+            document.write("겨울을 좋아하는 당신! 눈사람을 만들고 스키를 타러가요~");
+        }
+    </script>
+</body>
+</html>
