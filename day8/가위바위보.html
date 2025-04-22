@@ -19,25 +19,27 @@
         // 사용자가 이겼다면 "축하합니다 사용자가 이겼습니다~!(컴퓨터 : 랜덤값) 출력"
         // 사용자가 졌다면 "아쉽네요 컴퓨터가 이겼습니다~!(컴퓨터 : 랜덤값) 출력"
 
-        let userVictory = prompt("가위, 바위, 보 중 택1");
-        let randomNum = Math.ceil(Math.random()*3);
-        let computerVictory;
+        document.write("<h1> 가위바위보 게임 </h1>");
+        let userChoice = prompt("가위, 바위, 보 중 하나를 입력하세요");
+        let randomNum = Math.ceil(Math.random() *3);
+        let computerChoice;
+
         if(randomNum === 1) {
-            computerVictory = '가위';
+            computerChoice = "가위";
         } else if(randomNum === 2) {
-            computerVictory = '바위';
+            computerChoice = "바위";
         } else {
-            computerVictory = '보';
+            computerChoice = "보";
         }
 
-        if (userVictory === computerVictory) {
-            document.write(`<p> 축하합니다~! 사용자가 이겼습니다~ ${computerVictory} </p>`);
+        if(userChoice === computerChoice) {
+            document.write(`비겼다! 컴퓨터도 ${computerChoice}를 냈다!`);
+        } else if (
+            (userChoice === "가위" && computerChoice === "보") || (userChoice === "바위" && computerChoice === "가위") || (userChoice === "보" && computerChoice === "바위")
+        ) {
+            document.write(`축하합니다 사용자가 승리하였습니다! 컴퓨터 : ${computerChoice}`);
         } else {
-            document.write(`<p> 아쉽네요ㅜ 컴퓨터가 이겼습니다~! ${computerVictory} </p>`);
-        }
-        
-        if (userVictory == computerVictory) {
-            document.write(`<p> 비겼습니다! 컴퓨터도 ${computerVictory} 을 냈습니다~!</p>`);
+            document.write(`컴퓨터가 승리하였습니다.`);
         }
     </script>
 </body>
