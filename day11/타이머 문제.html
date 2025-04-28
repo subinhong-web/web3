@@ -22,7 +22,22 @@
         8. 타이머 간격은 1초정도로 설정.
         */
 
-        let userSetTime = prompt("");
+        let userTime = Number(prompt("타이머로 시간을 입력하세요. (초) : "));
+
+        if(isNaN(userTime) || userTime <= 0 ) {
+            document.write("올바른 시간을 입력해주세요.");
+        }else {
+            document.write(`타이머 시작 ${userTime} 초 남음 <br>`);
+            let timer = setInterval(() => {
+                userTime--;
+                if(userTime > 0) {
+                    document.write(`남은시간 : ${userTime} 초 <br>`);
+                } else {
+                    clearInterval(timer);
+                    document.write("타이머 종료.");
+                }
+            },1000);
+        }
     </script>
 </body>
 </html>
