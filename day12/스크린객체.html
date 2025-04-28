@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크린 객체</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        1. scren.width : 화면의 넓이를 변환
+        2. scren.heigth : 화면의 높이를 변환
+        3. screen.availWidth : 화면의 작업표시줄을 제외한 넓이값을 변환
+        4. screen.availHeigth : 화면의 작업표시줄을 제외한 높이값을 변환
+        5. screen.colorDepth :모니터가 표현 가능한 컬러 bit를 변환
+        */
+
+        document.write(`화면의 넓이는 ${screen.width} 입니다. <br>`);
+        document.write(`화면의 높이는 ${screen.height} 입니다. <br>`);
+        document.write(`화면의 작업표시줄을 제외한 넓이는 ${screen.availWidth} 입니다. <br>`);
+        document.write(`화면의 작업표시줄을 제외한 높이는 ${screen.availHeigth} 입니다. <br>`);
+        document.write(`화면의 컬러 길이 bit는 ${screen.colorDepth} 입니다. <br>`);
+    </script>
+</body>
+</html>
